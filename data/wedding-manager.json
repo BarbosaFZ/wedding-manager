@@ -1,13 +1,14 @@
 {
   "format": "te-wedding-manager-json-db",
   "version": 1,
-  "updatedAt": "2026-10-06T14:16:18.000Z",
+  "updatedAt": "2026-10-06T14:35:00.000Z",
   "data": {
     "settings": {"date": "2027-09-11", "venue": "", "couple": "Tiago & Eliana"},
     "expenses": [{"name": "Quinta", "cat": "Quinta / Catering", "total": 0, "paid": 0, "next": ""}],
     "guests": [
       {"name": "Tiago Barbosa", "group": "Família", "side": "Ambos", "type": "Adulto", "gender": "Masculino", "period": "Dia Inteiro", "rsvp": "Pendente", "invite": false, "household": "Tiago", "food": "", "table": "", "keepsake": "", "notes": ""},
-      {"name": "Maria", "group": "Família", "side": "Ambos", "type": "Adulto", "gender": "Masculino", "period": "Dia Inteiro", "rsvp": "Pendente", "invite": false, "household": "Maria", "food": "", "table": "", "keepsake": "", "notes": ""}
+      {"name": "Maria", "group": "Família", "side": "Ambos", "type": "Adulto", "gender": "Masculino", "period": "Dia Inteiro", "rsvp": "Pendente", "invite": false, "household": "Maria", "food": "", "table": "", "keepsake": "", "notes": ""},
+      {"name": "teste", "group": "Noivos", "side": "Tiago", "type": "Criança 4-10", "gender": "Masculino", "period": "Dia Inteiro", "rsvp": "Pendente", "invite": false, "household": "Tiago", "food": "", "table": "", "keepsake": "", "notes": ""}
     ],
     "tables": [{"name": "Mesa dos Noivos", "capacity": 2, "guests": [], "shape": "Redonda", "incompatible": []}],
     "music": [], "timeline": [], "tasks": [], "suppliers": [], "gifts": [], "notes": []
