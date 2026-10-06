@@ -4,19 +4,16 @@ Aplicação web estática para organizar o casamento: orçamento e pagamentos, c
 
 ## Executar localmente
 
-Abra `index.html` num navegador. A aplicação não precisa de instalação nem de um servidor de aplicação. Os dados são guardados no `localStorage` do navegador, por isso convém exportar cópias de segurança em **Definições**.
+Abra `index.html` num navegador. Os dados ficam no armazenamento desse navegador. A lista inicial de convidados vem de `data/wedding-manager.json` (a aplicação preserva dados já existentes no navegador).
+
+## Base de dados JSON e CRUD
+
+Em **Definições → Persistência em JSON**, liga um ficheiro `.json` existente ou cria um novo. Ao guardar alterações na aplicação, o documento JSON completo é atualizado; a ligação é recordada neste navegador. Na lista de convidados podes criar, consultar, editar e apagar registos. A importação e exportação de backups também estão disponíveis.
+
+O navegador precisa de suportar a File System Access API (por exemplo, Chrome ou Edge) para escrever diretamente num ficheiro escolhido. GitHub Pages serve a aplicação e o ficheiro JSON inicial como conteúdo estático; não permite à aplicação escrever no repositório, não sincroniza dispositivos e não suporta edições simultâneas. Para uma base central partilhada seria necessário um serviço backend.
 
 ## Publicar no GitHub Pages
 
-Este repositório está preparado para publicar automaticamente a partir da branch `main` através de GitHub Actions:
+O repositório publica a partir da branch `main` através de GitHub Actions. Em **Settings → Pages**, seleciona **GitHub Actions** como origem.
 
-1. Crie um repositório no GitHub e envie os ficheiros do projeto para a branch `main`.
-2. No repositório, abra **Settings → Pages** e escolha **GitHub Actions** como origem da publicação.3. Os envios para `main` irão publicar o conteúdo deste projeto.
-
-O site é estático e não tem autenticação real. Na primeira utilização, o ecrã pede para criares uma palavra-passe, que fica guardada apenas no navegador. Isto não protege a aplicação contra acesso técnico nem oculta os dados; não coloques dados pessoais ou sensíveis numa publicação pública. Os dados guardados no navegador não são sincronizados entre dispositivos.
-
-## Persistir uma base JSON
-
-Em **Definições → Persistência em JSON**, usa **Criar ficheiro JSON** para iniciar um ficheiro no computador ou **Ligar ficheiro JSON existente** para carregar uma base já criada. Depois de autorizado, cada gravação na aplicação atualiza esse ficheiro, e a aplicação tenta voltar a ligar-se a ele quando é aberta no mesmo navegador e perfil. Para importar um backup JSON exportado anteriormente, usa **Importar backup**.
-
-A ligação direta requer um navegador compatível (como Chrome ou Edge) e uma origem segura, como GitHub Pages. O ficheiro fica no dispositivo escolhido e não é uma base de dados alojada: não sincroniza automaticamente entre dispositivos nem utilizadores.
+A autenticação é local ao navegador e não protege os dados publicados. Não coloques informação pessoal ou sensível numa publicação pública.
